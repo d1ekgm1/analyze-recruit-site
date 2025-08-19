@@ -14,6 +14,10 @@ export default defineConfig(({ mode }) => ({
     mode === 'development' &&
     componentTagger(),
   ].filter(Boolean),
+  // 여기 반드시! repo 이름과 동일
+  base: '/analyze-recruit-site/',
+  // Pages가 읽기 편하도록 빌드 산출물을 docs로 바로 뽑기
+  build: { outDir: 'docs' },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
